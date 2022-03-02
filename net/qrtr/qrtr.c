@@ -1876,6 +1876,7 @@ static int qrtr_recvmsg(struct socket *sock, struct msghdr *msg,
 		 * make sure to clear it.
 		 */
 		memset(addr, 0, sizeof(*addr));
+
 		addr->sq_family = AF_QIPCRTR;
 		addr->sq_node = cb->src_node;
 		addr->sq_port = cb->src_port;
