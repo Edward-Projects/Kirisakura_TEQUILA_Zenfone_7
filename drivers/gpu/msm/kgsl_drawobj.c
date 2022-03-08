@@ -36,6 +36,10 @@
 static struct kmem_cache *memobjs_cache;
 static struct kmem_cache *sparseobjs_cache;
 
+static struct kmem_cache *drawobj_sparse_cache;
+static struct kmem_cache *drawobj_sync_cache;
+static struct kmem_cache *drawobj_cmd_cache;
+
 static void syncobj_destroy_object(struct kgsl_drawobj *drawobj)
 {
 	struct kgsl_drawobj_sync *syncobj = SYNCOBJ(drawobj);
